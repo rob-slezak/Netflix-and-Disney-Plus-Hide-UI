@@ -1,0 +1,36 @@
+.watch-video--bottom-controls-container {
+	display: none;
+}
+
+.watch-video--flag-container {
+	display: none;
+}
+
+.watch-video--back-container {
+	display: none;
+}
+
+.watch-video--evidence-overlay-container {
+	display: none;
+}
+
+.advisory-container {
+	display: none;
+}
+
+.watch-video--advisory-container {
+	display: none;
+}
+
+.watch-video .playback-notification {
+	display: none;
+}
+
+.watch-video .watch-video--player-view {
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	border: none !important;
+}
