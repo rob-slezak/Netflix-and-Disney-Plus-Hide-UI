@@ -1,5 +1,5 @@
 const APPLICABLE_PROTOCOLS = ["http:", "https:"];
-const PAGE = { UNKNOWN: 0, NETFLIX: 'Netflix', DISNEY: 'Disney' };
+const PAGE = { UNKNOWN: 0, NETFLIX: 'Netflix', DISNEY: 'Disney', AMAZON: "Amazon" };
 let enabled = {};
 
 /*
@@ -72,6 +72,9 @@ function urlMatch(url) {
 	}
 	if (/^https?:\/\/www\.disneyplus\.com\/?.*/.test(url)) {
 		return PAGE.DISNEY;
+	}
+	if (/^https?:\/\/www\.primevideo\.com\/?.*/.test(url)) {
+		return PAGE.AMAZON;
 	}
 	return PAGE.UNKNOWN;
 }
