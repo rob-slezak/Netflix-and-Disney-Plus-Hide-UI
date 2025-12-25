@@ -120,3 +120,15 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 Toggle CSS when the page action is clicked.
 */
 browser.pageAction.onClicked.addListener(toggleCSS);
+
+/*
+Toggle CSS when the keyboard shortcut is clicked.
+*/
+browser.commands.onCommand.addListener((command, tab) => {
+	if (command === "toggle-ui") {
+		const page = urlMatch(tab.url);
+		if (protocolIsApplicable(tab.url) && page != PAGE.UNKNOWN) {
+			toggleCSS(tab);
+		}
+	}
+});

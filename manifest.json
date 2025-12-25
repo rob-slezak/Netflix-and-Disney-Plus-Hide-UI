@@ -1,24 +1,32 @@
 {
-  "description": "Hides the UI for Netflix or Disney +",
-  "manifest_version": 2,
-  "name": "ND+ Hide UI",
-  "version": "1.0",
-  "homepage_url": "https://github.com/rob-slezak/Netflix-and-Disney-Plus-Hide-UI",
-  "icons": {
-    "48": "icons/icon-48.png"
-  },
+	"description": "Hides the UI for Netflix or Disney +",
+	"manifest_version": 2,
+	"name": "ND+ Hide UI",
+	"version": "1.0",
+	"homepage_url": "https://github.com/rob-slezak/Netflix-and-Disney-Plus-Hide-UI",
+	"icons": {
+		"48": "icons/icon-48.png"
+	},
 
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "page_action": {
-    "default_icon": "icons/Netflix-off-light.png",
-    "browser_style": true
-  },
-  
-  "permissions": [
-    "activeTab",
-    "tabs",
-    "theme"
-  ]
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"page_action": {
+		"default_icon": "icons/Netflix-off-light.png",
+		"browser_style": true
+	},
+
+	"permissions": [
+		"activeTab",
+		"tabs",
+		"theme"
+	],
+	"commands": {
+		"toggle-ui": {
+			"description": "Trigger show/hide UI",
+			"suggested_key": {
+				"default": "Ctrl+Alt+H"
+			}
+		}
+	}
 }
