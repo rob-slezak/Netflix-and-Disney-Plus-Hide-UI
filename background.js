@@ -9,6 +9,10 @@ async function getTheme() {
 	let theme = 'light';
 
 	const browserTheme = await (browser.theme.getCurrent());
+	if (browserTheme && browserTheme.properties && browserTheme.properties.color_scheme === 'dark') {
+		theme = 'dark';
+	}
+
 	if (browserTheme && browserTheme.colors && browserTheme.colors.toolbar_field) {
 		let rgb = browserTheme.colors.toolbar_field.split(',');
 		let r = parseInt(rgb[0].substring(4));
