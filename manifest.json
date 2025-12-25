@@ -2,7 +2,7 @@
 	"description": "Hides the UI for Netflix or Disney +",
 	"manifest_version": 2,
 	"name": "ND+ Hide UI",
-	"version": "2.0",
+	"version": "2.1",
 	"homepage_url": "https://github.com/rob-slezak/Netflix-and-Disney-Plus-Hide-UI",
 	"icons": {
 		"48": "icons/icon-48.png"
@@ -21,6 +21,14 @@
 		"tabs",
 		"theme"
 	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{1a15f18c-3f58-49d0-90f2-29d41df2a476}",
+	  		"data_collection_permissions": {
+				"required": ["none"]
+			}
+    	}
+	},
 	"commands": {
 		"toggle-ui": {
 			"description": "Trigger show/hide UI",
