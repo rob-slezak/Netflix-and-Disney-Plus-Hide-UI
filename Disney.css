@@ -1,4 +1,4 @@
-.btm-media-overlays-container {
+main-app-controls-overlay, skip-overlay, end-card-overlay, ratings-overlay {
     display: none;
 }
 
